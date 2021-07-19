@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Responsive</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  
+  <style>
+
+    .navbar {
+        margin-bottom: 0;
+        background-color: #0f0f0f;
+        border: 0;
+        font-size: 15px !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+    }
+    
+    .jumbotron{
+        background-color: #0f0f0f;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        padding: 15%;
+        color: burlywood;
+    }
+
+    .img-responsive{
+        max-width: 100%;
+        height: auto;
+        background-position: center;
+        padding-top: 5px;
+        display: block;
+    }
+
+    .row{
+        text-align: center;
+    }
+
+    .container-fluid{
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .collapse{
+        float: right;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding: 5%;
+    }
+
+    .btn{
+        border: 2px solid #e7e7e7;
+        color: gray;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .btn:hover{
+        background-color: #e7e7e7;
+    }
+
+    .bottomright {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 18px;
+    }
+    
+    .fab.fa-instagram{
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); 
+        background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        color: whitesmoke;
+        border-radius: 100%;
+        margin: 20px;
+    }
+
+    .footer-icon {
+        background-repeat: no-repeat;
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        background-color: #353333;
+        padding: 25px;
+        width: 100%;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+                <a class="navbar-brand" href="#Home">LOGO</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#Home">HOME</a></li>
+              <li><a href="#About">ABOUT</a></li>
+              <li><a href="#Portfolio">PORTFOLIO</a></li>
+              <li><a href="#Services">SERVICES</a></li>
+              <li><a href="#Contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron text-center" id="Home">
+    <h1>COMPANY</h1> 
+</div>
+
+<br><br>
+
+<div id="About" class="container-fluid">    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-9">
+                <div class="card-body"> 
+                    <img src="Pic/photo.jpg" width="500" height="400">   
+                </div>
+            </div>
+            <div class="col-md-3" style="text-align: left;">
+                <h4><b>About Title</b></h4><br>
+                <div class="card" style="text-align: center; width: 100%; height: 100%; padding: 50%">Detail</div>  
+            </div>
+            <div class="bottomright">
+                <a href="#About" class="btn btn">Read More</a>
+            </div>  
+        </div>
+    </div>     
+</div>
+
+<br>
+
+<div id="Services" class="container-fluid text-center">   
+    <h4><b>Services</b></h4><br>
+    <div class="row">
+        <div class="column">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Pic/flower.jpg" class="img-responsive" style="width:100%;">
+                    <br><B><p>Service Title</p></B>
+                </div>
+            </div>
+        </div>
+            
+        <div class="column">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Pic/flower.jpg" class="img-responsive" style="width:100%">
+                    <br><B><p>Service Title</p></B>
+                </div>
+            </div>
+        </div>
+    
+        <div class="column">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="Pic/flower.jpg" class="img-responsive" style="width:100%">
+                    <br><B><p>Service Title</p></B>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <a href="#Services" class="btn btn">View All</a>
+</div>
+    
+<br>
+
+<div id="Portfolio" class="container-fluid bg-3 text-center">   
+    <h4><b>Portfolio</b></h4><br>
+        <div class="row">
+            <div class="column">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Pic/home.jpg" class="img-responsive">
+                    </div>
+                        <h2>Portfolio</h2>
+                        <p>Type Name</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Pic/home.jpg" class="img-responsive">
+                    </div>
+                    <h2>Portfolio</h2>
+                    <p>Type Name</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Pic/home.jpg" class="img-responsive">
+                    </div>
+                    <h2>Portfolio</h2>
+                    <p>Type Name</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="Pic/home.jpg" class="img-responsive">
+                    </div>
+                    <h2>Portfolio</h2>
+                    <p>Type Name</p>
+                </div>
+            </div>
+      </div>
+</div>
+<div class="row">
+    <a href="#Portfolio" class="btn btn">View All</a>
+</div>
+<br>
+
+<footer class="container-fluid text-center" id="Contact">
+    <div class="row">
+        <div class="col-12" style="margin-top: 20px; margin-bottom: 20px">
+            <i class="fab fa-facebook fa-2x" style="color: #39569c; border-radius: 100px;"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+            <i class="fab fa-line fa-2x" style="color: #00c300;"></i>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <li><a href="#Home" style="color: wheat;">HOME</a></li>
+        </div>
+        <div class="col-md-2">
+            <li><a href="#About" style="color: wheat;">ABOUT</a></li>
+        </div>
+        <div class="col-md-2">
+            <li><a href="#Portfolio" style="color: wheat;">PORTFOLIO</a></li>
+        </div>
+        <div class="col-md-2">
+            <li><a href="#Services" style="color: wheat;">SERVICES</a></li>
+        </div>
+        <div class="col-md-2">
+            <li><a href="#Contact" style="color: wheat;">CONTACT</a></li>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</footer>
+
+</body>
+</html>

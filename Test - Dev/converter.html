@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currency Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<style>
+
+body {
+  background-color: #ECF5E5;
+  background-size: cover;
+  font-family: 'Sarabun', sans-serif;
+}
+
+.jumbotron{
+  background-color:#A9C596;
+}
+
+.container{
+  width: 40%;
+  border: 10px solid #A9C596;
+  padding: 20px;
+  margin: 20px;
+}
+
+.btn{
+  text-align: left;
+}
+
+</style>
+</head>
+<body>
+  <div class="jumbotron text-center"></div>
+
+  <div class="container">
+    <div class="card" style="padding: 10px;">
+      <h4 style="text-align: center;"><b>แปลงค่าเงิน จากสกุลเงินต่าง ๆ เป็นเงินไทย</b></h4><br>
+      <div class="card-body">
+        <form id="form1">
+              <p class="h4 mb-4" style="text-align: left;">ค่าเงิน</p>
+              <input type="number" id="number" class="form-control mb-4"><br>
+
+              <p class="h4 mb-4" style="text-align: left;">เลือกค่าเงิน (From)</p>
+              <select name="currency" class="currency" id="select" style="width: 100%;"></select><br><br>
+              
+              <button class="btn btn-primary" type="button" onclick="myFunction()">Go</button><br><br>
+              
+              <p class="h4 mb-4">ผลลัพธ์ [THB]</p><br>
+              <p class="h4 mb-4" id="demo"></p><br>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const select = document.querySelectorAll('.currency');
+
+    fetch('https://www.floatrates.com/daily/thb.json').then((data) => data.json())
+      .then((data) => {
+        display(data);
+      });
+
+    function display(data) {
+      const entries = Object.entries(data);
+      for (var i = 0; i < entries.length; i++) {
+        select[0].innerHTML += `<option value="${entries[i][1].rate}">${entries[i][1].code}</option>`;
+      }
+    }
+
+    function myFunction() {
+      var select = document.getElementById("select");
+      var number = document.getElementById("number");
+      var input = number.value;
+      var sel = select.value;
+      var output = 100/(input*sel)*input;
+      document.getElementById("demo").innerHTML = output;
+    }
+
+  </script>
+</body>
+
+</html>
